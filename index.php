@@ -19,19 +19,19 @@
             <form action="CRUD/cad_produto.php" method="post">
                 <div class="form-group offset-md-3 col-4">
                     <label for="">Nome Produto: </label>
-                    <input class="form-control input-group mb-3" type="text" name="" id="" required>
+                    <input class="form-control input-group mb-3" type="text" name="nome_produto" id="" required>
                 </div>
                 <div class="form-group offset-md-3 col-4">
                     <label for="">Quantidade do produto: </label>
-                    <input class="form-control input-group mb-3" type="text" name="" id="" required>
+                    <input class="form-control input-group mb-3" type="text" name="qtd_produto" id="" required>
                 </div>
                 <div class="form-group offset-md-3 col-4">
                     <label for="">Valor do Produto: </label>
-                    <input class="form-control input-group mb-3" type="text" name="" id="" required>
+                    <input class="form-control input-group mb-3" type="text" name="valor_produto" id="" required>
                 </div>
                 <div class="form-group offset-md-3 col-4">
                     <label for="">Categoria do Produto: </label>
-                    <input class="form-control input-group mb-3" type="text" name="" id="" required>
+                    <input class="form-control input-group mb-3" type="text" name="categoria_produto" id="" required>
                 </div>
                 <div class="form-group offset-md-3 col-4">
                     <button type="submit" class="btn btn-success"> ENVIAR PRODUTOS </button>
