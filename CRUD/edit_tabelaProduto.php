@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,7 +15,7 @@
 <body>
     <div class="container">
         <br>
-        <h1 style="text-align:center;">Cadastro de Produtos</h1>
+        <h1 style="text-align:center;">Editar Produto</h1>
         <br>
             <form action="CRUD/cad_produto.php" method="post">
                 <div class="form-group offset-md-3 col-4">
