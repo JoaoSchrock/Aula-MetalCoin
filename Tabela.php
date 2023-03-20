@@ -1,3 +1,22 @@
+<?php
+  require("conn.php");
+
+  $tabela = $pdo-> prepare("SELECT id_produto, id_produto, nome_produto, quantidade_produto, valor_produto, categoria_produto FROM produtos");
+  $tabela->execute();
+  $rowTabela = $tabela->fetchAll();
+
+  if(empty($rowTabela)){
+    echo "<script>
+    alert('Tabela vazia!!!');
+    </script>";
+  }
+
+  echo '<pre>';
+  print_r($rowTabela);
+  echo '</pre>';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +34,7 @@
     <div class="container">
         <h1 style="text-align:center;">Tabela de Produtos</h1>
         <table class="table">
-            <thead>
+            <!-- <thead>
                 <tr>
                     <th scope="col">Id do Produto</th>
                     <th scope="col">Nome do Produto</th>
@@ -32,7 +51,7 @@
                     <td scope="row">Eletronicos</td>
                     <td scope="row">1,500,00</td>
                 </tr>
-            </tbody>
+            </tbody> -->
         </table>
     </div>
 
