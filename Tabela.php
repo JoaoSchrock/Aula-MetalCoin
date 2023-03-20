@@ -11,9 +11,9 @@
     </script>";
   }
 
-  echo '<pre>';
-  print_r($rowTabela);
-  echo '</pre>';
+//   echo '<pre>';
+//   print_r($rowTabela);
+//   echo '</pre>';
 
 ?>
 
@@ -48,12 +48,12 @@
 
                 foreach($rowTabela as $linha){
                     echo '<tr>';
-                    echo "<th scope='row'>".$linha['id_produto']."</th>"; 
+                    echo "<th scope='row'>".$linha['id_produto']."</th>";
                     echo "<td>".$linha['nome_produto']."</td>";
                     echo "<td>".$linha['categoria_produto']."</td>";
                     echo "<td>".$linha['quantidade_produto']."</td>";
                     echo "<td>".$linha['valor_produto']."</td>";
-                    echo "<td><button type='button' class='btn btn-warning'>Editar</button></td>";
+                    echo '<td><a href=edit_tabela.php?produto='.$linha['id_produto'].' class="btn btn-warning">Editar</a></td>';
                     echo "<td><button type='button' class='btn btn-danger'>Excluir</button></td>";
                     echo "</tr>";
                 }
