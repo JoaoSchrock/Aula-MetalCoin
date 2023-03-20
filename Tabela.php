@@ -1,7 +1,7 @@
 <?php
   require("conn.php");
 
-  $tabela = $pdo-> prepare("SELECT id_produto, id_produto, nome_produto, quantidade_produto, valor_produto, categoria_produto FROM produtos");
+  $tabela = $pdo-> prepare("SELECT id_produto, nome_produto, quantidade_produto, valor_produto, categoria_produto FROM produtos");
   $tabela->execute();
   $rowTabela = $tabela->fetchAll();
 
@@ -34,24 +34,31 @@
     <div class="container">
         <h1 style="text-align:center;">Tabela de Produtos</h1>
         <table class="table">
-            <!-- <thead>
+            <thead>
                 <tr>
                     <th scope="col">Id do Produto</th>
                     <th scope="col">Nome do Produto</th>
-                    <th scope="col">Quantidade do Produto</th>
                     <th scope="col">Categoria do Produto</th>
+                    <th scope="col">Quantidade do Produto</th>
                     <th scope="col">Valor do Produto</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td scope="row">Celular</td>
-                    <td scope="row">5</td>
-                    <td scope="row">Eletronicos</td>
-                    <td scope="row">1,500,00</td>
-                </tr>
-            </tbody> -->
+               <?php 
+
+                foreach($rowTabela as $linha){
+                    echo '<tr>';
+                    echo "<th scope='row'>".$linha['id_produto']."</th>"; 
+                    echo "<td>".$linha['nome_produto']."</td>";
+                    echo "<td>".$linha['categoria_produto']."</td>";
+                    echo "<td>".$linha['quantidade_produto']."</td>";
+                    echo "<td>".$linha['valor_produto']."</td>";
+                    echo "<td><button type='button' class='btn btn-warning'>Editar</button></td>";
+                    echo "<td><button type='button' class='btn btn-danger'>Excluir</button></td>";
+                    echo "</tr>";
+                }
+               ?>
+            </tbody> 
         </table>
     </div>
 
